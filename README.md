@@ -8,8 +8,8 @@ The project was initialized for Autotools using this [script](https://gist.githu
 
 All you need to do is the following:
 
-# ./build-dependencies.sh
-# ./build.sh
+* ./build-dependencies.sh
+* ./build.sh
 
 Assuming all your projects are under the same folder, you can use the library under XCode as follows...
 
