@@ -1,52 +1,48 @@
-This library project is based on the autotools-basic template. The library makes a call to [Algorithmia](https://algorithmia.com/) using Microsoft's C++ REST SDK, [Casablanca](https://casablanca.codeplex.com/). Casablanca is dependant on [Boost](http://www.boost.org/) and [OpenSSL](https://www.openssl.org/). So there's some complexity!
+# Welcome!
 
-Casablanca has done a good job documenting how to build the library for [iOS](https://casablanca.codeplex.com/wikipage?title=Setup%20and%20Build%20on%20iOS) and [OS X](https://casablanca.codeplex.com/wikipage?title=Setup%20and%20Build%20on%20OSX&referringTitle=Documentation). For your convenience it's all been scripted.
+This library demonstrates how to use Autotools and how it's built for iOS. The code itself make a call to [Algorithmia](https://algorithmia.com/) using Microsoft's C++ REST SDK, [Casablanca](https://casablanca.codeplex.com/). Casablanca is dependent on [Boost](http://www.boost.org/) and [OpenSSL](https://www.openssl.org/). So there's some complexity!
 
-The project demonstrates how the library is built for both OS X and iOS. It's sibling projects AlgoPhone and AlgoClient demonstrate how the library is used.
+It's sibling projects AlgoPhone and AlgoClient demonstrate how the library can be used.
 
-Autoconf
-Copy template
-Update configure.ac
-Update Makefile.am
-Run autoreconf -i
-Run automake --i --copy
+The project was initialized for Autotools using this [script](https://gist.github.com/p15martin/30ca4669d8bb7c3947f7).
 
+All you need to do is the following:
 
-iOS
+./build-dependencies.sh
+./build.sh
 
-./build-ios.sh
+Assuming this project is in the same workspace as your 
 
-Assuming the projects are in the same workspace:
+Assuming all your projects are under the same folder you can configure your projects under XCode as follows...
 
+## iOS
 
-Build Phases (unless otherwise stated they will be under lib/ios)
-libiconv.dylib (standard iOS library)
-Security.framework (standard iOS framework)
-libcpprest.a
-boost.framework
-libcrypto.a
-libssl.a
+Add all the libraries under **dependencies/ios** to **Link Binary With Libraries** under **Build Phases**. You will also need to add everyhting under **lib**.
 
-Build Settings (remove/edit paths if they were automatically added with the absolute path - it won't be portable!)
-Framework Search Paths - $(SOURCE_ROOT)/../algorithmia/dependencies/ios
-Header Search Paths - $(SOURCE_ROOT)/../algorithmia/lib/include, $(SOURCE_ROOT)/../algorithmia/dependencies/include
-Library Search Paths - $(SOURCE_ROOT)/../algorithmia/lib, $(SOURCE_ROOT)/../algorithmia/dependencies/ios
+Add the following to **Framework Search Paths** under **Build Settings** (tip: when you added the libraries above it probably already the paths, delete them as they won't be portable!):
 
+* $(SOURCE_ROOT)/../algorithmia/dependencies/ios
 
-OS X
+Add the following to **Header Search Paths** under **Build Settings**:
 
-./build-osx.sh
+* $(SOURCE_ROOT)/../algorithmia/lib/include
+* $(SOURCE_ROOT)/../algorithmia/dependencies/include
 
-Build Phases
-libalgorithmia.a
-libboost_system.dylib
-libboost_chrono.dylib
-libboost_thread-mt.dylib
-libcpprest.2.5.a
+Add the following to **Library Search Paths** under **Build Settings** (tip: when you added the libraries above it probably already the paths, delete them as they won't be portable!):
 
+* $(SOURCE_ROOT)/../algorithmia/lib
+* $(SOURCE_ROOT)/../algorithmia/dependencies/ios
 
-Build Settings (remove/edit paths if they were automatically added with the absolute path - it won't be portable!)
-Header Search Paths - $(SOURCE_ROOT)/../algorithmia/lib/include, $(SOURCE_ROOT)/../algorithmia/dependencies/include
-Library Search Paths - $(SOURCE_ROOT)/../algorithmia/lib, $(SOURCE_ROOT)/../algorithmia/dependencies/osx
+## OS X
 
+Add all the libraries under **dependencies/osx** to **Link Binary With Libraries** under **Build Phases**. You will also need to add everyhting under **lib**.
 
+Add the following to **Header Search Paths** under **Build Settings**:
+
+* $(SOURCE_ROOT)/../algorithmia/lib/include
+* $(SOURCE_ROOT)/../algorithmia/dependencies/include
+
+Add the following to **Library Search Paths** under **Build Settings** (tip: when you added the libraries above it probably already the paths, delete them as they won't be portable!):
+
+* $(SOURCE_ROOT)/../algorithmia/lib
+* $(SOURCE_ROOT)/../algorithmia/dependencies/osx
