@@ -1,6 +1,6 @@
 # Welcome!
 
-This library demonstrates how to use Autotools and how it's built for iOS. The code itself make a call to [Algorithmia](https://algorithmia.com/) using Microsoft's C++ REST SDK, [Casablanca](https://casablanca.codeplex.com/). Casablanca is dependent on [Boost](http://www.boost.org/) and [OpenSSL](https://www.openssl.org/). So there's some complexity!
+This library demonstrates how to use [Autoconf](https://www.gnu.org/software/autoconf/) and how it's built for iOS. The code itself make a call to [Algorithmia](https://algorithmia.com/) using Microsoft's C++ REST SDK, [Casablanca](https://casablanca.codeplex.com/). Casablanca is dependent on [Boost](http://www.boost.org/) and [OpenSSL](https://www.openssl.org/). So there's some complexity!
 
 Its sibling projects AlgoPhone and AlgoClient demonstrate how the library can be used.
 
