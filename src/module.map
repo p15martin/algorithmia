@@ -1,0 +1,4 @@
+module algorithmia [system] {
+    header "./algorithmia.h"
+    export *
+}

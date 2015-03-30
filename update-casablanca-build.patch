@@ -1,0 +1,27 @@
+From ff7c85a2ee3aa8b9336298a27da2e417e2d34aec Mon Sep 17 00:00:00 2001
+From: Peter Martin <p15martin@outlook.com>
+Date: Mon, 30 Mar 2015 12:37:02 -0700
+Subject: [PATCH 1/1] Updating to correctly locate boost
+
+---
+ Release/CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Release/CMakeLists.txt b/Release/CMakeLists.txt
+index 310f558..592c9af 100644
+--- a/Release/CMakeLists.txt
++++ b/Release/CMakeLists.txt
+@@ -10,8 +10,8 @@ set(ANDROID_STL_FLAGS)
+ # Platform (not compiler) specific settings
+ if(IOS)
+   set(IOS_SOURCE_DIR "${CMAKE_SOURCE_DIR}/../Build_iOS")
+-  set(Boost_FRAMEWORK "-F ${IOS_SOURCE_DIR} -framework boost")
+-  set(Boost_INCLUDE_DIR "${IOS_SOURCE_DIR}/boost.framework/Headers")
++  set(Boost_FRAMEWORK "-F ${IOS_SOURCE_DIR} -framework ${IOS_SOURCE_DIR}/boostoniphone/ios/framework/boost")
++  set(Boost_INCLUDE_DIR "${IOS_SOURCE_DIR}/boostoniphone/ios/framework/boost.framework/Headers")
+ 
+   set(OPENSSL_FOUND 1)
+   set(OPENSSL_INCLUDE_DIR "${IOS_SOURCE_DIR}/openssl/include")
+-- 
+2.3.2
+

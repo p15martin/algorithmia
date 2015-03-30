@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A903A2841ABDD6FA00813F60 /* messagetypes.h in Headers */ = {isa = PBXBuildFile; fileRef = A903A2831ABDD6FA00813F60 /* messagetypes.h */; };
+		A903F4381ACA0921006147D3 /* libboost_chrono.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F4341ACA0921006147D3 /* libboost_chrono.dylib */; };
+		A903F4391ACA0921006147D3 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F4351ACA0921006147D3 /* libboost_system.dylib */; };
+		A903F43A1ACA0921006147D3 /* libboost_thread-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F4361ACA0921006147D3 /* libboost_thread-mt.dylib */; };
+		A903F43B1ACA0921006147D3 /* libcpprest.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F4371ACA0921006147D3 /* libcpprest.2.5.dylib */; };
+		A90D2CC11ABDD27A00811B63 /* algorithmia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A90D2CBF1ABDD27A00811B63 /* algorithmia.cpp */; };
+		A90D2CC21ABDD27A00811B63 /* algorithmia.h in Headers */ = {isa = PBXBuildFile; fileRef = A90D2CC01ABDD27A00811B63 /* algorithmia.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A903A2831ABDD6FA00813F60 /* messagetypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messagetypes.h; path = src/messagetypes.h; sourceTree = "<group>"; };
+		A903F4341ACA0921006147D3 /* libboost_chrono.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_chrono.dylib; path = ../../../../../../usr/local/Cellar/boost/1.57.0/lib/libboost_chrono.dylib; sourceTree = "<group>"; };
+		A903F4351ACA0921006147D3 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../../../../../usr/local/Cellar/boost/1.57.0/lib/libboost_system.dylib; sourceTree = "<group>"; };
+		A903F4361ACA0921006147D3 /* libboost_thread-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_thread-mt.dylib"; path = "../../../../../../usr/local/Cellar/boost/1.57.0/lib/libboost_thread-mt.dylib"; sourceTree = "<group>"; };
+		A903F4371ACA0921006147D3 /* libcpprest.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpprest.2.5.dylib; path = casablanca/build.release/Binaries/libcpprest.2.5.dylib; sourceTree = "<group>"; };
+		A90D2CAF1ABDD11C00811B63 /* libalgorithmia.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libalgorithmia.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A90D2CBF1ABDD27A00811B63 /* algorithmia.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = algorithmia.cpp; path = src/algorithmia.cpp; sourceTree = "<group>"; };
+		A90D2CC01ABDD27A00811B63 /* algorithmia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = algorithmia.h; path = src/algorithmia.h; sourceTree = "<group>"; };
+		A9D029C11AC09933006C4E1B /* module.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A90D2CAC1ABDD11C00811B63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A903F4381ACA0921006147D3 /* libboost_chrono.dylib in Frameworks */,
+				A903F4391ACA0921006147D3 /* libboost_system.dylib in Frameworks */,
+				A903F43A1ACA0921006147D3 /* libboost_thread-mt.dylib in Frameworks */,
+				A903F43B1ACA0921006147D3 /* libcpprest.2.5.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A90D2CA61ABDD11C00811B63 = {
+			isa = PBXGroup;
+			children = (
+				A903F4341ACA0921006147D3 /* libboost_chrono.dylib */,
+				A903F4351ACA0921006147D3 /* libboost_system.dylib */,
+				A903F4361ACA0921006147D3 /* libboost_thread-mt.dylib */,
+				A903F4371ACA0921006147D3 /* libcpprest.2.5.dylib */,
+				A90D2CC31ABDD28D00811B63 /* src */,
+				A90D2CB01ABDD11C00811B63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A90D2CB01ABDD11C00811B63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A90D2CAF1ABDD11C00811B63 /* libalgorithmia.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A90D2CC31ABDD28D00811B63 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A90D2CC01ABDD27A00811B63 /* algorithmia.h */,
+				A90D2CBF1ABDD27A00811B63 /* algorithmia.cpp */,
+				A903A2831ABDD6FA00813F60 /* messagetypes.h */,
+				A9D029C11AC09933006C4E1B /* module.map */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A90D2CAD1ABDD11C00811B63 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A903A2841ABDD6FA00813F60 /* messagetypes.h in Headers */,
+				A90D2CC21ABDD27A00811B63 /* algorithmia.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A90D2CAE1ABDD11C00811B63 /* algorithmia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90D2CB31ABDD11C00811B63 /* Build configuration list for PBXNativeTarget "algorithmia" */;
+			buildPhases = (
+				A90D2CAB1ABDD11C00811B63 /* Sources */,
+				A90D2CAC1ABDD11C00811B63 /* Frameworks */,
+				A90D2CAD1ABDD11C00811B63 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = algorithmia;
+			productName = algorithmia;
+			productReference = A90D2CAF1ABDD11C00811B63 /* libalgorithmia.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A90D2CA71ABDD11C00811B63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Peter Martin";
+				TargetAttributes = {
+					A90D2CAE1ABDD11C00811B63 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = A90D2CAA1ABDD11C00811B63 /* Build configuration list for PBXProject "algorithmia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A90D2CA61ABDD11C00811B63;
+			productRefGroup = A90D2CB01ABDD11C00811B63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A90D2CAE1ABDD11C00811B63 /* algorithmia */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A90D2CAB1ABDD11C00811B63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A90D2CC11ABDD27A00811B63 /* algorithmia.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A90D2CB11ABDD11C00811B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A90D2CB21ABDD11C00811B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A90D2CB41ABDD11C00811B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include,
+					dependencies/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+					dependencies/osx,
+				);
+				OTHER_LDFLAGS = "-lboost_system";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A90D2CB51ABDD11C00811B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include,
+					dependencies/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+					dependencies/osx,
+				);
+				OTHER_LDFLAGS = "-lboost_system";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A90D2CAA1ABDD11C00811B63 /* Build configuration list for PBXProject "algorithmia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90D2CB11ABDD11C00811B63 /* Debug */,
+				A90D2CB21ABDD11C00811B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90D2CB31ABDD11C00811B63 /* Build configuration list for PBXNativeTarget "algorithmia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90D2CB41ABDD11C00811B63 /* Debug */,
+				A90D2CB51ABDD11C00811B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A90D2CA71ABDD11C00811B63 /* Project object */;
+}

@@ -1,0 +1,42 @@
+From bf0e9d730b5ed807c60b38e79fd5a82900a3e137 Mon Sep 17 00:00:00 2001
+From: Peter Martin <p15martin@outlook.com>
+Date: Sun, 29 Mar 2015 17:23:55 -0700
+Subject: [PATCH 1/1] Updating to build boost for Casablanca
+
+---
+ boost.sh | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/boost.sh b/boost.sh
+index 22b308c..73d0855 100644
+--- a/boost.sh
++++ b/boost.sh
+@@ -15,7 +15,7 @@
+ : ${BOOST_VERSION:=1.56.0}
+ : ${BOOST_VERSION2:=1_56_0}
+ 
+-: ${BOOST_LIBS:="atomic chrono date_time exception filesystem program_options random signals system test thread"}
++: ${BOOST_LIBS:="thread chrono filesystem regex locale system random"}
+ 
+ # Current iPhone SDK
+ : ${IPHONE_SDKVERSION:=`xcodebuild -showsdks | grep iphoneos | egrep "[[:digit:]]+\.[[:digit:]]+" -o | tail -1`}
+@@ -333,6 +333,7 @@ buildFramework()
+     mkdir -p $FRAMEWORK_BUNDLE/Versions/$FRAMEWORK_VERSION
+     mkdir -p $FRAMEWORK_BUNDLE/Versions/$FRAMEWORK_VERSION/Resources
+     mkdir -p $FRAMEWORK_BUNDLE/Versions/$FRAMEWORK_VERSION/Headers
++    mkdir -p $FRAMEWORK_BUNDLE/Versions/$FRAMEWORK_VERSION/Headers/boost
+     mkdir -p $FRAMEWORK_BUNDLE/Versions/$FRAMEWORK_VERSION/Documentation
+ 
+     echo "Framework: Creating symlinks..."
+@@ -348,7 +349,7 @@ buildFramework()
+     $ARM_DEV_CMD lipo -create $BUILDDIR/*/libboost.a -o "$FRAMEWORK_INSTALL_NAME" || abort "Lipo $1 failed"
+ 
+     echo "Framework: Copying includes..."
+-    cp -r $PREFIXDIR/include/boost/*  $FRAMEWORK_BUNDLE/Headers/
++    cp -r $PREFIXDIR/include/boost/*  $FRAMEWORK_BUNDLE/Headers/boost
+ 
+     echo "Framework: Creating plist..."
+     cat > $FRAMEWORK_BUNDLE/Resources/Info.plist <<EOF
+-- 
+2.3.2
+
