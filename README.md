@@ -2,18 +2,16 @@
 
 This library demonstrates how to use Autotools and how it's built for iOS. The code itself make a call to [Algorithmia](https://algorithmia.com/) using Microsoft's C++ REST SDK, [Casablanca](https://casablanca.codeplex.com/). Casablanca is dependent on [Boost](http://www.boost.org/) and [OpenSSL](https://www.openssl.org/). So there's some complexity!
 
-It's sibling projects AlgoPhone and AlgoClient demonstrate how the library can be used.
+Its sibling projects AlgoPhone and AlgoClient demonstrate how the library can be used.
 
 The project was initialized for Autotools using this [script](https://gist.github.com/p15martin/30ca4669d8bb7c3947f7).
 
 All you need to do is the following:
 
-./build-dependencies.sh
-./build.sh
+# ./build-dependencies.sh
+# ./build.sh
 
-Assuming this project is in the same workspace as your 
-
-Assuming all your projects are under the same folder you can configure your projects under XCode as follows...
+Assuming all your projects are under the same folder, you can use the library under XCode as follows...
 
 ## iOS
 
